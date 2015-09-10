@@ -8,6 +8,8 @@ gem 'sqlite3'
 
 gem 'devise'
 
+gem 'gravtastic'
+
 gem 'carrierwave'
 
 gem 'mini_magick', '3.8.0'
