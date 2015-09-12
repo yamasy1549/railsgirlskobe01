@@ -6,7 +6,6 @@
       <div class="btn-actions">
         <%= btn_edit(edit_idea_path(@idea)) %>
         <%= btn_delete(@idea) %>
-        <%= btn_back(ideas_path) %>
       </div>
     <% end %>
     <%= image_tag(@idea.picture_url, width: '100%') if @idea.picture.present? %>

@@ -2,5 +2,7 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @comment %> |
-<%= link_to 'Back', comments_path %>
+<div class="btn-actions">
+  <%= btn_show(@comment) %>
+  <%= btn_back(comments_path) %>
+</div>
