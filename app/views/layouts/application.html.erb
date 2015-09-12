@@ -8,7 +8,6 @@
 </head>
 
 <body>
-  <%# navbar追加 %>
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -35,14 +34,13 @@
         </p>
 
         <ul class="nav navbar-nav">
-          <li class="active"><a href="/ideas">Ideas</a></li>
+          <li><a href="/ideas">Ideas</a></li>
           <li><%= link_to 'New Idea', new_idea_path %></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <%# Bootstrap対応 %>
   <div class="container">
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
@@ -54,10 +52,9 @@
     <%= yield %>
   </div>
 
-  <%# footer追加 %>
   <footer>
     <div class="container">
-      Rails Girls 2015
+      Rails Girls KOBE #01 2015.09.12
     </div>
   </footer>
 </body>

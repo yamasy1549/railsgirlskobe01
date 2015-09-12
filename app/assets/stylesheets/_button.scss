@@ -1,0 +1,10 @@
+.btn {
+  border-color: $btn-border-color;
+  color: $btn-color;
+
+  &:hover {
+    border-color: $btn-border-color;
+    background-color: $btn-hover-bg;
+    color: $btn-hover-color;
+  }
+}

@@ -1,0 +1,30 @@
+body {
+  padding-top: 60px;
+  background-color: $body-bg;
+  color: $body-color;
+  font-family: "ヒラギノ角ゴ ProN","Hiragino Kaku Gothic ProN";
+}
+
+body > .container {
+  background-image: $container-bg;
+  padding: 60px;
+  border-radius: 20px;
+}
+
+footer {
+  color: $footer-color;
+  margin: 30px auto 20px auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $h1-color;
+}
+
+h1 {
+  margin: 0 auto 40px auto;
+}
