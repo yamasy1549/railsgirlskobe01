@@ -3,15 +3,11 @@
     <h2><%= @idea.name %></h2>
     <p><%= @idea.description %></p>
     <p>
-      <%= link_to edit_idea_path(@idea), class: 'btn btn-xs' do %>
-        <i class="fa fa-pencil"></i> Edit
-      <% end %>
+      <%= btn_edit(edit_idea_path(@idea)) %>
       <%= link_to @idea, data: { confirm: 'Are you sure?' }, method: :delete, class: 'btn btn-xs' do %>
         <i class="fa fa-trash-o"></i> Delete
       <% end %>
-      <%= link_to ideas_path, class: 'btn btn-xs' do %>
-        <i class="fa fa-arrow-left"></i> Back
-      <% end %>
+      <%= btn_back(ideas_path) %>
     </p>
     <%= image_tag(@idea.picture_url, width: '100%') if @idea.picture.present? %>
   </div>
