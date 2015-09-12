@@ -9,7 +9,12 @@
         <%= link_to idea do %>
           <%= image_tag idea.picture_url(:thumb) if idea.picture? %>
         <% end %>
-        <h3 class="idea-title"><%= link_to idea.name, idea %></h3>
+        <h3>
+          <%= link_to idea.name, idea, class: 'idea-title' %>
+          <small class="idea-comment">
+            <i class="fa fa-comments"></i> <%= idea.comments.count %>
+          </small>
+        </h3>
         <%= idea.description %>
       </div>
     <% end %>

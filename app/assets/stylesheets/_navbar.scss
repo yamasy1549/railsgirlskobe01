@@ -9,7 +9,10 @@
   ul.nav.navbar-nav > li > a {
     color: $navbar-color;
 
-    &:hover {
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
       color: $navbar-color;
       text-decoration: none;
     }
