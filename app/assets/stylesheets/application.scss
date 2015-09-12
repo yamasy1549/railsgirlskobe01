@@ -1,4 +1,6 @@
 @import 'bootstrap-sass';
+@import "fontawesome";
+
 @import 'variables';
 @import 'initialize';
 @import 'navbar';
@@ -9,4 +11,5 @@
  *= require_tree .
  *= require_self
  *= require bootstrap-sass
+ *= require fontawesome
  */
