@@ -2,11 +2,13 @@
   <div class="col-md-8">
     <h2><%= @idea.name %></h2>
     <p><%= @idea.description %></p>
-    <div class="btn-actions">
-      <%= btn_edit(edit_idea_path(@idea)) %>
-      <%= btn_delete(@idea) %>
-      <%= btn_back(ideas_path) %>
-    </div>
+    <% if current_user.id == @idea.user_id %>
+      <div class="btn-actions">
+        <%= btn_edit(edit_idea_path(@idea)) %>
+        <%= btn_delete(@idea) %>
+        <%= btn_back(ideas_path) %>
+      </div>
+    <% end %>
     <%= image_tag(@idea.picture_url, width: '100%') if @idea.picture.present? %>
   </div>
 
@@ -17,10 +19,12 @@
         <div class="comment">
           <strong class="comment-user"><%= comment.user_name %></strong>
           <%= comment.body %>
-          <div class="btn-actions">
-            <%= btn_edit(comment_path(comment)) %>
-            <%= btn_delete(comment_path(comment)) %>
-          </div>
+          <% if current_user.id == comment.user_id %>
+            <div class="btn-actions">
+              <%= btn_edit(edit_comment_path(comment)) %>
+              <%= btn_delete(comment_path(comment)) %>
+            </div>
+          <% end %>
         </div>
       <% end %>
     </div>
