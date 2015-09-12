@@ -2,29 +2,28 @@
   <div class="col-md-8">
     <h2><%= @idea.name %></h2>
     <p><%= @idea.description %></p>
-    <p>
+    <div class="btn-actions">
       <%= btn_edit(edit_idea_path(@idea)) %>
-      <%= link_to @idea, data: { confirm: 'Are you sure?' }, method: :delete, class: 'btn btn-xs' do %>
-        <i class="fa fa-trash-o"></i> Delete
-      <% end %>
+      <%= btn_delete(@idea) %>
       <%= btn_back(ideas_path) %>
-    </p>
+    </div>
     <%= image_tag(@idea.picture_url, width: '100%') if @idea.picture.present? %>
   </div>
 
   <div class="col-md-4">
     <h3>Comments</h3>
-    <% @comments.each do |comment| %>
-      <div>
-        <strong><%= comment.user_name %></strong>
-        <p>
+    <div class="comments">
+      <% @comments.each do |comment| %>
+        <div class="comment">
+          <strong class="comment-user"><%= comment.user_name %></strong>
           <%= comment.body %>
-          <%= link_to comment_path(comment), data: { confirm: '削除してもよろしいですか？' }, method: :delete, class: 'btn btn-xs' do %>
-            <i class="fa fa-trash-o"></i> Delete
-          <% end %>
-        </p>
-      </div>
-    <% end %>
+          <div class="btn-actions">
+            <%= btn_edit(comment_path(comment)) %>
+            <%= btn_delete(comment_path(comment)) %>
+          </div>
+        </div>
+      <% end %>
+    </div>
     <%= render 'comments/form' %>
   </div>
 </div>

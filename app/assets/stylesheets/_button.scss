@@ -1,14 +1,36 @@
 .btn {
   border-color: $btn-border-color;
+  background-color: $btn-bg;
   color: $btn-color;
 
   &:hover {
-    border-color: $btn-border-color;
+    border-color: $btn-hover-border-color;
     background-color: $btn-hover-bg;
     color: $btn-hover-color;
   }
 }
 
-.btn-xs {
+.btn-actions {
+  .btn {
+    border-color: $btn-hover-border-color;
+    background-color: $btn-hover-bg;
+    color: $btn-hover-color;
+
+    &:hover {
+      border-color: $btn-border-color;
+      background-color: $btn-bg;
+      color: $btn-color;
+    }
+  }
+}
+
+.btn-edit,
+.btn-back,
+.btn-show,
+.btn-delete {
   margin-top: 20px;
+}
+
+.btn-actions {
+  margin: 5px auto 20px auto;
 }
