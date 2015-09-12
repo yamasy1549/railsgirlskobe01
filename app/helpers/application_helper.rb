@@ -10,4 +10,10 @@ module ApplicationHelper
       raw "<i class='fa fa-arrow-left'></i> Back"
     end
   end
+
+  def btn_show(path)
+    link_to path, class: 'btn btn-xs' do
+      raw "<i class='fa fa-search'></i> Show"
+    end
+  end
 end
